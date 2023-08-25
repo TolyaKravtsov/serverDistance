@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "import", "react-hooks", "sort-destructure-keys", "@typescript-eslint"],
+  "rules": {
+    "prettier/prettier": [2, {"endOfLine": "auto", "tabWidth": 2}],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "sort-destructure-keys/sort-destructure-keys": 2,
+    "react/jsx-sort-props": [2, {"callbacksLast": true, "shorthandFirst": true}],
+    "react/jsx-key": 2,
+    "react/react-in-jsx-scope": "warn",
+    "no-console": ["error", {"allow": ["info", "error"]}],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-debugger": 2,
+    "react/prop-types": [0, {"ignore": ["className", "children", "location", "params", "location*"]}],
+    "linebreak-style": 0,
+    "quotes": ["error", "double"],
+    "semi": "error",
+
+    // Organize import section.
+    "sort-imports": ["error", { "ignoreDeclarationSort": true }],
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "import/order": ["error", {
+      "newlines-between": "always",
+      "groups": ["builtin", "external", "parent", "sibling", "index"],
+      "pathGroups": [
+        { "pattern": "react", "group": "external", "position": "before" }
+      ],
+      "pathGroupsExcludedImportTypes": ["react"],
+      "alphabetize": {"order": "asc", "caseInsensitive": true}
+    }]
+  }
+}
