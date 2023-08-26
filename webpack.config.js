@@ -4,6 +4,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
+  output: {
+    path: resolve(__dirname, "dist"),
+    filename: "index_bundle.js",
+    publicPath: "/",
+  },
   module: {
     rules: [
       {
@@ -26,6 +31,9 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],

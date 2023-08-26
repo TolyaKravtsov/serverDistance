@@ -6,8 +6,13 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./input.css";
 
 import { App } from "./App";
+import { Login } from "./Login";
 
 const queryClient = new QueryClient();
+
+export enum Pages {
+  login = "login",
+}
 
 const router = createBrowserRouter(
   [
@@ -18,6 +23,12 @@ const router = createBrowserRouter(
           <App />
         </QueryClientProvider>
       ),
+      children: [
+        {
+          path: Pages.login,
+          element: <Login />,
+        },
+      ],
     },
   ],
   { basename: "/" },

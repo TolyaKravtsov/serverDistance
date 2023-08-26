@@ -1,5 +1,6 @@
 {
   "name": "serverdistance",
+  "homepage": "./",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@tanstack/react-query": "^4.33.0",
+    "axios": "^1.4.0",
     "css-loader": "^6.8.1",
     "postcss": "^8.4.28",
     "postcss-loader": "^7.3.3",
