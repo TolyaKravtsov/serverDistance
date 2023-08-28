@@ -1,14 +1,14 @@
 import React from "react";
 
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+
+import { Header } from "./components/Header";
 
 export const App = () => {
-  const navigate = useNavigate();
-
   return (
     <div>
+      <Header />
       <Outlet />
-      <button className="rounded-xl p-8" onClick={() => navigate("/login")}></button>
     </div>
   );
 };
