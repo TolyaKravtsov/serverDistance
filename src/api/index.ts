@@ -3,7 +3,7 @@ import axios from "axios";
 export const TOKEN = "token";
 
 export const http = axios.create({
-  baseURL: "https://playground.tesonet.lt/v1",
+  baseURL: "https://playground.tesonet.lt/v1/",
   headers: {
     "Content-Type": "application/json; charset=utf-8",
   },
