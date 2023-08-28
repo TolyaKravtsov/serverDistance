@@ -5,6 +5,7 @@
 1. If application will be scale, i propose to use some library for handling forms.
 For example ```react-hook-form``` can be useful to it. In our case, we have only one form, so i decided to use native solution.
 2. Add Internationalization: ```I18n``` for example
+3. Maybe modern ```Vite``` instead of ```Webpack```.
 
 
 ### EsLint configuration

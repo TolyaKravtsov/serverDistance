@@ -13,8 +13,8 @@ const queryClient = new QueryClient();
 
 export enum Pages {
   mainPage = "/",
-  login = "login",
-  servers = "servers",
+  login = "/login",
+  servers = "/servers",
 }
 
 export const router = createBrowserRouter(
