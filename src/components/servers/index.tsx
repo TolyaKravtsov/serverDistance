@@ -2,16 +2,19 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import { IconArrowDown, IconArrowUp } from "../../common/icons";
 import { Pages } from "../../Router";
 import { Spinner } from "../common/Spinner";
 
 import { ServerRow } from "./ServerRow";
 import { useGetServers } from "./useGetServers";
+import { useTableSort } from "./useServerSorting";
 
 export const Servers = () => {
   const { data, isError, isLoading } = useGetServers();
-
   const navigate = useNavigate();
+
+  const { fieldName, onSort, serverInfo, sortDirection } = useTableSort(data);
 
   if (isError)
     return (
@@ -40,16 +43,30 @@ export const Servers = () => {
                     #
                   </th>
                   <th className="text-sm font-medium text-gray-900 px-6 py-4 text-left" scope="col">
-                    Server
+                    <button onClick={() => onSort("name")}>
+                      <div className="flex">
+                        Name
+                        {fieldName === "name" && (
+                          <div>{sortDirection === "asc" ? <IconArrowDown /> : <IconArrowUp />}</div>
+                        )}
+                      </div>
+                    </button>
                   </th>
                   <th className="text-sm font-medium text-gray-900 px-6 py-4 text-left" scope="col">
-                    Distance
+                    <button onClick={() => onSort("distance")}>
+                      <div className="flex">
+                        Distance
+                        {fieldName === "distance" && (
+                          <div>{sortDirection === "asc" ? <IconArrowDown /> : <IconArrowUp />}</div>
+                        )}
+                      </div>
+                    </button>
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {data?.map(server => (
-                  <React.Fragment key={server.name}>
+                {serverInfo?.map(server => (
+                  <React.Fragment key={server.name + server.distance}>
                     <ServerRow server={server} />
                   </React.Fragment>
                 ))}
