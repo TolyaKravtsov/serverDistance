@@ -24,7 +24,9 @@ export const Login = () => {
         <h1 className="text-3xl font-semibold text-center text-indigo-700">Sign in</h1>
         <form className="mt-6" onSubmit={onSubmit}>
           <div className="mb-2">
-            <label className="block text-sm font-semibold text-gray-800">Username</label>
+            <label className="block text-sm font-semibold text-gray-800" htmlFor="username">
+              Username
+            </label>
             <input
               className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
               id="username"
@@ -33,7 +35,9 @@ export const Login = () => {
             />
           </div>
           <div className="mb-2">
-            <label className="block text-sm font-semibold text-gray-800">Password</label>
+            <label className="block text-sm font-semibold text-gray-800" htmlFor="password">
+              Password
+            </label>
             <input
               className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
               id="password"
