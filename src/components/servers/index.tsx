@@ -8,7 +8,7 @@ import { Spinner } from "../common/Spinner";
 
 import { ServerRow } from "./ServerRow";
 import { useGetServers } from "./useGetServers";
-import { useTableSort } from "./useServerSorting";
+import { useTableSort } from "./useTableSort";
 
 export const Servers = () => {
   const { data, isError, isLoading } = useGetServers();

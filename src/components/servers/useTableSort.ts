@@ -8,7 +8,7 @@ type Fields = "name" | "distance";
 export const useTableSort = (data?: Server[]) => {
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
   const [serverInfo, setServerInfo] = useState<Server[] | undefined>(data);
-  const [fieldName, setFieldName] = useState<Fields>();
+  const [fieldName, setFieldName] = useState<Fields>("name");
 
   useEffect(() => {
     setServerInfo(data);
