@@ -12,15 +12,15 @@ import { ErrorPage } from "./ErrorPage";
 const queryClient = new QueryClient();
 
 export enum Pages {
-  mainPage = "/",
-  login = "/login",
-  servers = "/servers",
+  MainPage = "/",
+  Login = "/login",
+  Servers = "/servers",
 }
 
 export const router = createBrowserRouter(
   [
     {
-      path: Pages.mainPage,
+      path: Pages.MainPage,
       element: (
         <QueryClientProvider client={queryClient}>
           <App />
@@ -28,16 +28,16 @@ export const router = createBrowserRouter(
       ),
       children: [
         {
-          path: Pages.login,
+          path: Pages.Login,
           element: <Login />,
         },
         {
-          path: Pages.servers,
+          path: Pages.Servers,
           element: <Servers />,
         },
       ],
       errorElement: <ErrorPage />,
     },
   ],
-  { basename: Pages.mainPage },
+  { basename: Pages.MainPage },
 );

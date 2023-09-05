@@ -8,7 +8,7 @@ export const ErrorPage = () => {
   const navigate = useNavigate();
 
   const onRedirect = useCallback(() => {
-    navigate(Pages.mainPage);
+    navigate(Pages.MainPage);
   }, [navigate]);
 
   return (

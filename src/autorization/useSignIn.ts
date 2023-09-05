@@ -15,7 +15,7 @@ export const useSignIn = () => {
   const { isError, mutate } = useMutation(signIn, {
     onSuccess: data => {
       localStorage.setItem(TOKEN, data.token);
-      navigate(Pages.servers);
+      navigate(Pages.Servers);
       setTokenContext(data.token);
     },
   });

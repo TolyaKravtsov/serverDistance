@@ -13,22 +13,22 @@ export const Header = () => {
   const onLogout = useCallback(() => {
     localStorage.removeItem(TOKEN);
     setTokenContext("");
-    navigate(Pages.mainPage);
+    navigate(Pages.MainPage);
   }, [navigate, setTokenContext]);
 
   const onLogin = useCallback(() => {
-    navigate(Pages.login);
+    navigate(Pages.Login);
   }, [navigate]);
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-indigo-500 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <Link className="font-semibold text-xl tracking-tight" to={Pages.mainPage}>
+        <Link className="font-semibold text-xl tracking-tight" to={Pages.MainPage}>
           Server Distance
         </Link>
         {!!token && (
           <div className="ml-4">
-            <Link className="block lg:inline-block lg:mt-0 text-indigo-200 hover:text-white mr-4" to={Pages.servers}>
+            <Link className="block lg:inline-block lg:mt-0 text-indigo-200 hover:text-white mr-4" to={Pages.Servers}>
               Servers
             </Link>
           </div>
