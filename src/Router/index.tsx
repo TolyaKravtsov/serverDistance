@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter } from "react-router-dom";
 
 import { App } from "../App";
-import { Login } from "../autorization/Login";
+import { Login } from "../components/autorization/Login";
 import { Servers } from "../components/servers";
 
 import { ErrorPage } from "./ErrorPage";

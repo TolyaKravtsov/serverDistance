@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 
-import { DeveloperIcon } from "../common/DeveloperIcon";
-import { Spinner } from "../common/Spinner";
+import { DeveloperIcon } from "../../common/DeveloperIcon";
+import { Spinner } from "../../common/Spinner";
 
 import { useSignIn } from "./useSignIn";
 
