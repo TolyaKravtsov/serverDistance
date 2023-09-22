@@ -12,7 +12,7 @@ export const useSignIn = () => {
   const navigate = useNavigate();
   const { setTokenContext } = useContext(AuthContext);
 
-  const { isError, mutate } = useMutation(signIn, {
+  const { isError, isLoading, mutate } = useMutation(signIn, {
     onSuccess: data => {
       localStorage.setItem(TOKEN, data.token);
       navigate(Pages.Servers);
@@ -20,5 +20,5 @@ export const useSignIn = () => {
     },
   });
 
-  return { authorization: mutate, isError };
+  return { authorization: mutate, isError, isLoading };
 };

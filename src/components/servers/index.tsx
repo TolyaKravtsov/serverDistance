@@ -3,8 +3,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { IconArrowDown, IconArrowUp } from "../../common/icons";
+import { Spinner } from "../../common/Spinner";
 import { Pages } from "../../Router";
-import { Spinner } from "../common/Spinner";
 
 import { ServerRow } from "./ServerRow";
 import { useGetServers } from "./useGetServers";
