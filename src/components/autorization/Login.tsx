@@ -24,7 +24,7 @@ export const Login = () => {
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
       <div className="w-full h-full p-6 m-auto bg-white rounded-md shadow-2xl lg:max-w-md">
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center h-10 mb-6">
           <DeveloperIcon />
         </div>
         {isLoading ? (
@@ -65,7 +65,7 @@ export const Login = () => {
               </div>
               <div className="mt-6">
                 <button
-                  className="w-full px-4 py-3 tracking-wide text-white transition-colors duration-200 transform bg-blue-600 rounded-3xl hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+                  className="w-full px-4 py-3 tracking-wide text-white transition-colors duration-200 transform bg-blue-600 rounded-full hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
                   type="submit"
                 >
                   Login

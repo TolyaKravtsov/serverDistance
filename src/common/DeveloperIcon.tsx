@@ -1,7 +1,14 @@
 import React from "react";
 
 export const DeveloperIcon = () => (
-  <svg fill="none" height="48" preserveAspectRatio="xMidYMin" width="108" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    fill="none"
+    height="100%"
+    preserveAspectRatio="xMidYMin"
+    viewBox="0 0 108 48"
+    width="100%"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clip-path="url(#clip0_21_525)">
       <g clip-path="url(#clip1_21_525)">
         <g clip-path="url(#clip2_21_525)">
