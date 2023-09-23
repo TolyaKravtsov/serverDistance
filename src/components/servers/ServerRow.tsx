@@ -16,7 +16,7 @@ export const ServerRow: React.FC<ServerRowProps> = ({ server }) => {
         <CountryFlag country={serverName[0].trim()} />
         <span className="pl-3">{server.name}</span>
       </td>
-      <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">{server.distance}</td>
+      <td className="text-sm text-right text-gray-900 font-semibold px-6 py-4 whitespace-nowrap">{server.distance}</td>
     </tr>
   );
 };

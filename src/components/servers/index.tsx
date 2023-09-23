@@ -29,15 +29,20 @@ export const Servers = () => {
       </div>
     );
 
-  if (isLoading) return <Spinner />;
+  if (isLoading)
+    return (
+      <div className="flex justify-center items-center min-w-screen min-h-[calc(100vh-80px)]">
+        <Spinner />
+      </div>
+    );
 
   return (
-    <div className="flex flex-col justify-center items-center bg-slate-200 min-h-screen">
-      <div className="flex justify-center flex-col items-center">
+    <div className="flex flex-col justify-center items-center bg-slate-200 min-h-[calc(100vh-80px)] lg:p-10 p-3">
+      <div className="flex justify-center flex-col items-center text-center">
         <label className="text-5xl pb-6 font-semibold">Server list</label>
         <label className="text-base pb-6">The distance between you and the server</label>
       </div>
-      <div className="relative flex flex-col justify-center w-1/2 h-[800px]">
+      <div className="relative flex flex-col justify-center lg:w-1/2 h-[500px] w-full">
         <div className="w-full p-6 m-auto bg-white rounded-3xl shadow-xl h-full overflow-auto">
           <div className="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
             <div className="inline-block min-w-full">
@@ -47,20 +52,20 @@ export const Servers = () => {
                     <tr>
                       <th className="text-sm font-medium text-gray-900 px-6 py-4 text-left" scope="col">
                         <button onClick={() => onSort("name")}>
-                          <div className="flex">
+                          <div className="flex items-end">
                             Country Name
                             {fieldName === "name" && (
-                              <div>{sortDirection === "asc" ? <IconArrowDown /> : <IconArrowUp />}</div>
+                              <>{sortDirection === "asc" ? <IconArrowDown /> : <IconArrowUp />}</>
                             )}
                           </div>
                         </button>
                       </th>
-                      <th className="text-sm font-medium text-gray-900 px-6 py-4 text-left" scope="col">
+                      <th className="text-sm text-right font-medium text-gray-900 px-6 py-4" scope="col">
                         <button onClick={() => onSort("distance")}>
                           <div className="flex">
                             Distance
                             {fieldName === "distance" && (
-                              <div>{sortDirection === "asc" ? <IconArrowDown /> : <IconArrowUp />}</div>
+                              <>{sortDirection === "asc" ? <IconArrowDown /> : <IconArrowUp />}</>
                             )}
                           </div>
                         </button>

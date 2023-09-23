@@ -22,7 +22,7 @@ export const Login = () => {
   );
 
   return (
-    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+    <div className="relative flex flex-col justify-center min-h-[calc(100vh-80px)] overflow-hidden p-4">
       <div className="w-full h-full p-6 m-auto bg-white rounded-md shadow-2xl lg:max-w-md">
         <div className="flex justify-center h-10 mb-6">
           <DeveloperIcon />
