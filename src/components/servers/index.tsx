@@ -42,7 +42,7 @@ export const Servers = () => {
         <label className="text-5xl pb-6 font-semibold">Server list</label>
         <label className="text-base pb-6">The distance between you and the server</label>
       </div>
-      <div className="relative flex flex-col justify-center lg:w-1/2 h-[500px] w-full">
+      <div className="relative flex flex-col justify-center lg:w-1/3 h-[500px] w-full">
         <div className="w-full p-6 m-auto bg-white rounded-3xl shadow-xl h-full overflow-auto">
           <div className="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
             <div className="inline-block min-w-full">

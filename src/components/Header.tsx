@@ -1,5 +1,6 @@
 import React, { useCallback, useContext } from "react";
 
+import { useQueryClient } from "@tanstack/react-query";
 import { Link, useNavigate } from "react-router-dom";
 
 import { TOKEN } from "../api";
@@ -10,12 +11,14 @@ import { Pages } from "../Router";
 export const Header = () => {
   const navigate = useNavigate();
   const { setTokenContext, token } = useContext(AuthContext);
+  const queryClient = useQueryClient();
 
   const onLogout = useCallback(() => {
     localStorage.removeItem(TOKEN);
     setTokenContext("");
     navigate(Pages.MainPage);
-  }, [navigate, setTokenContext]);
+    queryClient.invalidateQueries({ queryKey: ["servers"] });
+  }, [navigate, queryClient, setTokenContext]);
 
   const onLogin = useCallback(() => {
     navigate(Pages.Login);
